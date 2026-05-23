@@ -1,0 +1,39 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# SayIt runtime (local only)
+logs/
+*.log
+.sayit.pid
+.whisperflow.pid
+
+# Distribution / local artifacts
+sayit.zip
+*.zip
+
+# macOS
+.DS_Store
+
+# IDE / editor
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets (never commit)
+.env
+.env.*
+*.pem
+credentials.json
+
+# Local test / scratch (optional)
+test.txt
+debug_keys.py

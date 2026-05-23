@@ -1,0 +1,32 @@
+# SayIt Configuration
+
+[audio]
+sample_rate = 16000
+channels = 1
+# device_id = 0  # Uncomment and set to specific device ID
+
+[whisper]
+# Model speed/accuracy on Apple Silicon (M1/M2/M3/M4):
+#   tiny:    ~10x realtime, good for quick notes
+#   base:    ~7x realtime, better accuracy (default)
+#   small:   ~4x realtime, great balance
+#   medium:  ~2x realtime, excellent accuracy
+#   large-v3: ~1x realtime, best accuracy
+model = "base"
+device = "auto"  # cpu, cuda, auto
+compute_type = "auto"  # int8 (fastest on Apple Silicon), float16, float32
+language = "en"
+
+[hotkey]
+hotkey = "ctrl+."  # Hold Ctrl+. while speaking, release to transcribe.
+mode = "push_to_talk"  # push_to_talk or toggle
+
+[output]
+use_clipboard = true  # Always pastes full text at once
+typing_delay = 0.0  # Unused (clipboard paste only)
+add_trailing_space = true  # Add space after transcribed text
+
+[app]
+start_on_login = false
+show_notifications = true
+play_sounds = true
